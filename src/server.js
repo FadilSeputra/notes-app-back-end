@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
+const process = require('node:process');
 
 const init = async () => {
   const server = Hapi.server({
@@ -12,7 +13,6 @@ const init = async () => {
       },
     },
   });
-
 
   server.route(routes);
 
